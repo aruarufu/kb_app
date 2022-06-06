@@ -162,15 +162,15 @@ class MenuUtama extends StatelessWidget {
               children: [
                 Material(
                   borderRadius: BorderRadius.circular(100.0),
-                  color: Colors.amber[700],
+                  color: Colors.lightBlue[700],
                   child: IconButton(
-                    icon: Icon(Icons.access_alarm),
+                    icon: Icon(Icons.access_alarms_rounded),
                     onPressed: () {
                       Navigator.of(context).push(new MaterialPageRoute(
                           builder: (BuildContext context) => Absensi()));
                     },
                     padding: EdgeInsets.all(10),
-                    color: Colors.pink,
+                    color: Colors.white,
                     iconSize: 25.0,
                   ),
                 ),
@@ -188,7 +188,7 @@ class MenuUtama extends StatelessWidget {
               children: [
                 Material(
                   borderRadius: BorderRadius.circular(100.0),
-                  color: Colors.amber[700],
+                  color: Colors.lightBlue[700],
                   child: IconButton(
                     icon: Icon(Icons.edit),
                     onPressed: () {
@@ -196,7 +196,7 @@ class MenuUtama extends StatelessWidget {
                           builder: (BuildContext context) => Permit()));
                     },
                     padding: EdgeInsets.all(10),
-                    color: Colors.pink,
+                    color: Colors.white,
                     iconSize: 25.0,
                   ),
                 ),
@@ -204,7 +204,7 @@ class MenuUtama extends StatelessWidget {
                   height: 8.0,
                 ),
                 Text(
-                  'Izin',
+                  'Permit',
                   style: TextStyle(
                       color: Colors.black, fontWeight: FontWeight.bold),
                 )
@@ -214,7 +214,7 @@ class MenuUtama extends StatelessWidget {
               children: [
                 Material(
                   borderRadius: BorderRadius.circular(100.0),
-                  color: Colors.amber[700],
+                  color: Colors.lightBlue[700],
                   child: IconButton(
                     icon: Icon(Icons.map),
                     onPressed: () {
@@ -222,7 +222,7 @@ class MenuUtama extends StatelessWidget {
                           builder: (BuildContext context) => LocationArea()));
                     },
                     padding: EdgeInsets.all(10),
-                    color: Colors.pink,
+                    color: Colors.white,
                     iconSize: 25.0,
                   ),
                 ),
@@ -240,15 +240,15 @@ class MenuUtama extends StatelessWidget {
               children: [
                 Material(
                   borderRadius: BorderRadius.circular(100.0),
-                  color: Colors.amber[700],
+                  color: Colors.lightBlue[700],
                   child: IconButton(
-                    icon: Icon(Icons.watch),
+                    icon: Icon(Icons.photo_album_rounded),
                     onPressed: () {
                       Navigator.of(context).push(new MaterialPageRoute(
-                          builder: (BuildContext context) => Lembur()));
+                          builder: (BuildContext context) => Dokum()));
                     },
                     padding: EdgeInsets.all(10),
-                    color: Colors.pink,
+                    color: Colors.white,
                     iconSize: 25.0,
                   ),
                 ),
@@ -256,7 +256,33 @@ class MenuUtama extends StatelessWidget {
                   height: 8.0,
                 ),
                 Text(
-                  'Lembur',
+                  'Dokum',
+                  style: TextStyle(
+                      color: Colors.black, fontWeight: FontWeight.bold),
+                )
+              ],
+            ),
+            Column(
+              children: [
+                Material(
+                  borderRadius: BorderRadius.circular(100.0),
+                  color: Colors.lightBlue[700],
+                  child: IconButton(
+                    icon: Icon(Icons.watch),
+                    onPressed: () {
+                      Navigator.of(context).push(new MaterialPageRoute(
+                          builder: (BuildContext context) => Dokum()));
+                    },
+                    padding: EdgeInsets.all(10),
+                    color: Colors.white,
+                    iconSize: 25.0,
+                  ),
+                ),
+                SizedBox(
+                  height: 8.0,
+                ),
+                Text(
+                  'SAW',
                   style: TextStyle(
                       color: Colors.black, fontWeight: FontWeight.bold),
                 )

@@ -59,7 +59,7 @@ class _ProfileState extends State<Profile> {
                 Container(
                   height: 220,
                   decoration: BoxDecoration(
-                      color: Colors.orange,
+                      color: Colors.lightBlueAccent,
                       borderRadius: BorderRadius.only(
                           bottomLeft: Radius.circular(30),
                           bottomRight: Radius.circular(30))),
@@ -69,7 +69,7 @@ class _ProfileState extends State<Profile> {
                   child: DefaultTextStyle(
                     style: TextStyle(
                         fontSize: 12,
-                        color: Colors.white,
+                        color: Colors.lightBlue[100],
                         fontWeight: FontWeight.bold),
                     child: Column(
                       children: <Widget>[

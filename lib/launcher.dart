@@ -44,9 +44,9 @@ class _LauncherState extends State<Launcher>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.orange[500],
+      backgroundColor: Colors.lightBlue[500],
       body: Container(
-        decoration: BoxDecoration(color: Colors.orangeAccent[500]),
+        decoration: BoxDecoration(color: Colors.lightBlue[500]),
         child: Stack(
           fit: StackFit.expand,
           children: <Widget>[

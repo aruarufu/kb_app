@@ -23,7 +23,7 @@ void main() {
     debugShowCheckedModeBanner: false,
     title: "KAPAL BAJA APP",
     home: Launcher(),
-    theme: ThemeData(primaryColor: Colors.orange[500]),
+    theme: ThemeData(primaryColor: Colors.lightBlue[500]),
     routes: <String, WidgetBuilder>{
       SPLASH_SCREEN: (BuildContext context) => Launcher(),
       HOME_SCREEN: (BuildContext context) => Login(),
@@ -162,9 +162,9 @@ class _LoginState extends State<Login> {
               padding: EdgeInsets.only(top: 50.0),
               decoration: BoxDecoration(
                   gradient: LinearGradient(begin: Alignment.topCenter, colors: [
-                Colors.orange[900],
-                Colors.orange[700],
-                Colors.orange[500]
+                Colors.lightBlue[900],
+                Colors.lightBlue[700],
+                Colors.lightBlue[500]
               ])),
               child: new Center(
                 child: ListView(
@@ -188,16 +188,23 @@ class _LoginState extends State<Login> {
                                       "LOGIN",
                                       style: TextStyle(
                                           color: Colors.white,
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 40),
+                                          fontSize: 50,
+                                          fontWeight: FontWeight.bold),
                                     ),
                                     SizedBox(
                                       height: 5,
                                     ),
                                     Text(
-                                      "KAPAL BAJA APP",
+                                      "KAPAL BAJA",
                                       style: TextStyle(
-                                          color: Colors.white, fontSize: 15),
+                                          color: Colors.white,
+                                          fontSize: 24,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    Text(
+                                      "Mobile App",
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 20),
                                     )
                                   ],
                                 ),
@@ -209,7 +216,7 @@ class _LoginState extends State<Login> {
                                   Container(
                                     alignment: Alignment.centerRight,
                                     child: new Image.asset(
-                                      "gambar/logo-kb.png",
+                                      "gambar/logo-kbb.png",
                                       width: 150,
                                       height: 100,
                                     ),
@@ -243,7 +250,7 @@ class _LoginState extends State<Login> {
                                   color: Colors.white,
                                   boxShadow: [
                                     BoxShadow(
-                                        color: Color.fromRGBO(225, 95, 27, 3),
+                                        color: Color.fromRGBO(94, 209, 253, 3),
                                         blurRadius: 5,
                                         offset: Offset(0, 2))
                                   ]),
@@ -308,7 +315,7 @@ class _LoginState extends State<Login> {
                                   margin: EdgeInsets.symmetric(horizontal: 50),
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(50),
-                                      color: Colors.orange[900]),
+                                      color: Colors.lightBlue[900]),
                                   child: Center(
                                     child: _apiCall
                                         ? CircularProgressIndicator(
@@ -437,26 +444,26 @@ class _MainMenuState extends State<MainMenu> {
           ],
         ),
         bottomNavigationBar: TabBar(
-          labelColor: Colors.red,
-          unselectedLabelColor: Colors.amber[900],
-          indicatorColor: Colors.redAccent,
+          labelColor: Colors.lightBlue,
+          unselectedLabelColor: Colors.lightBlue[900],
+          indicatorColor: Colors.lightBlueAccent,
           tabs: <Widget>[
             Tab(
-              icon: Icon(Icons.home),
+              icon: Icon(Icons.home_rounded),
               child: new Text(
                 "Home",
                 style: TextStyle(fontSize: 12.0),
               ),
             ),
             Tab(
-              icon: Icon(Icons.person),
+              icon: Icon(Icons.person_rounded),
               child: new Text(
                 "Profile",
                 style: TextStyle(fontSize: 12.0),
               ),
             ),
             Tab(
-              icon: Icon(Icons.person),
+              icon: Icon(Icons.info_outline_rounded),
               child: new Text(
                 "About",
                 style: TextStyle(fontSize: 12.0),
