@@ -393,11 +393,11 @@ class _InputabsenState extends State<Inputabsen> {
             DropdownButton<String>(
               items: [
                 DropdownMenuItem<String>(
-                  child: Text('Masuk Kerja'),
+                  child: Text('Masuk'),
                   value: 'MASUK',
                 ),
                 DropdownMenuItem<String>(
-                  child: Text('Pulang Kerja'),
+                  child: Text('Pulang'),
                   value: 'PULANG',
                 ),
               ],
@@ -407,7 +407,7 @@ class _InputabsenState extends State<Inputabsen> {
                   print(_flagvalue);
                 });
               },
-              hint: Text('Pilih Tipe'),
+              hint: Text('Pilih Status'),
               value: _flagvalue,
             ),
             FlatButton(

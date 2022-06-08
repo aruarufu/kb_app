@@ -117,13 +117,13 @@ class _LocationAreaState extends State<LocationArea> {
       barrierDismissible: true,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('Konfirmasi'),
+          title: Text('KONFIRMASI'),
           titleTextStyle: TextStyle(color: Colors.black),
           content: SingleChildScrollView(
             child: ListBody(
               children: <Widget>[
                 Text(
-                  'Tekan ok jika sudah benar!',
+                  'Tekan OK Jika Lokasi Sudah Benar!',
                   style: TextStyle(fontSize: 13.0),
                 ),
                 // Text('You\’re like me. I’m never satisfied.'),
@@ -144,7 +144,7 @@ class _LocationAreaState extends State<LocationArea> {
               },
             ),
             FlatButton(
-              child: Text('Cancel'),
+              child: Text('Batal'),
               onPressed: () {
                 Navigator.of(context).pop();
               },
@@ -181,7 +181,7 @@ class _LocationAreaState extends State<LocationArea> {
     }
 
     if (jarak >= jarakapi) {
-      _snackbar('Area lokasi anda diluar jangkuan kantor anda. ');
+      _snackbar('Area lokasi anda diluar jangkuan! ');
     } else {
       String latudete = lat.toString();
       String langtude = lng.toString();
@@ -208,7 +208,8 @@ class _LocationAreaState extends State<LocationArea> {
       appBar: AppBar(
         title: Text(
           'Set lokasi anda saat ini',
-          style: TextStyle(fontSize: 14.0, fontWeight: FontWeight.bold),
+          style: TextStyle(
+              fontSize: 18.0, fontWeight: FontWeight.bold, color: Colors.white),
         ),
       ),
       body: Center(
@@ -218,7 +219,7 @@ class _LocationAreaState extends State<LocationArea> {
                 onPressed: () {
                   _getCurrentLocation(); // fungsi untuk mengetahui lokasi anda sekarang dimana
                 },
-                child: Text('Dapatkan lokasi saat ini')),
+                child: Text('Dapatkan lokasi saat ini..')),
             new Container(
               padding: EdgeInsets.all(8.0),
               height: MediaQuery.of(context).size.width,
@@ -242,7 +243,7 @@ class _LocationAreaState extends State<LocationArea> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.lightBlue,
         onPressed: () {
           _alertDialog(); // membuat fungsi dialog
         },

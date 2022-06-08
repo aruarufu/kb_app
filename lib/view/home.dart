@@ -1,5 +1,6 @@
 import 'package:kb_app/view/absensi.dart';
 import 'package:kb_app/view/lembur.dart';
+import 'package:kb_app/view/spkanggota.dart';
 import 'package:kb_app/view/location.dart';
 import 'package:kb_app/view/permit.dart';
 import 'package:flutter/material.dart';
@@ -41,10 +42,10 @@ class _HomeState extends State<Home> {
   }
 
   static final List<String> imgSlider = [
-    '2.jpeg',
-    '1.jpg',
-    '2.jpg',
+    '1.png',
+    '2.png',
     '3.png',
+    '4.png',
   ];
   final CarouselSlider autoPlayImage = CarouselSlider(
     options: CarouselOptions(
@@ -156,7 +157,7 @@ class MenuUtama extends StatelessWidget {
         padding: EdgeInsets.all(10.0),
         child: GridView.count(
           shrinkWrap: true,
-          crossAxisCount: 4,
+          crossAxisCount: 3,
           children: <Widget>[
             Column(
               children: [
@@ -204,7 +205,7 @@ class MenuUtama extends StatelessWidget {
                   height: 8.0,
                 ),
                 Text(
-                  'Permit',
+                  'Izin',
                   style: TextStyle(
                       color: Colors.black, fontWeight: FontWeight.bold),
                 )
@@ -271,7 +272,7 @@ class MenuUtama extends StatelessWidget {
                     icon: Icon(Icons.watch),
                     onPressed: () {
                       Navigator.of(context).push(new MaterialPageRoute(
-                          builder: (BuildContext context) => Dokum()));
+                          builder: (BuildContext context) => WebViewSAW()));
                     },
                     padding: EdgeInsets.all(10),
                     color: Colors.white,
@@ -282,7 +283,7 @@ class MenuUtama extends StatelessWidget {
                   height: 8.0,
                 ),
                 Text(
-                  'SAW',
+                  'SPK',
                   style: TextStyle(
                       color: Colors.black, fontWeight: FontWeight.bold),
                 )

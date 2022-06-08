@@ -101,9 +101,9 @@ class _PermitState extends State<Permit> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Pengajuan Permit',
+          'Pengajuan Izin',
           style: TextStyle(
-              fontSize: 13.0,
+              fontSize: 20.0,
               fontWeight: FontWeight.bold,
               color:
                   Colors.white), // ini kalau di PHP atau HTML seperti CSS nya
@@ -114,7 +114,7 @@ class _PermitState extends State<Permit> {
           Container(
             height: 100,
             decoration: BoxDecoration(
-              color: Colors.orange,
+              color: Colors.lightBlueAccent,
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(20),
                 bottomRight: Radius.circular(20),
@@ -148,7 +148,7 @@ class _PermitState extends State<Permit> {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.lightBlue,
         onPressed: () {
           Navigator.of(context).push(MaterialPageRoute(
               builder: (BuildContext context) => new InputPermit()));

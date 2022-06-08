@@ -16,8 +16,8 @@ class _DetailPermitState extends State<DetailPermit> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Detail Pengajuan Permit',
-          style: TextStyle(fontSize: 13),
+          'Detail Pengajuan Izin',
+          style: TextStyle(fontSize: 18),
         ),
       ),
       body: Container(

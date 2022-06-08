@@ -39,6 +39,7 @@ dependencies:
   dio: ^3.0.10
   datetime_picker_formfield: ^0.1.8
   flutter_web_browser: ^0.16.0
+  webview_flutter: ^2.0.13
 
 dev_dependencies:
   flutter_test:

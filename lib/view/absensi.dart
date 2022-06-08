@@ -145,8 +145,8 @@ class _AbsensiState extends State<Absensi> {
     return Scaffold(
       appBar: AppBar(
           title: new Text(
-            'Absensi periode bulan ini',
-            style: TextStyle(fontSize: 12),
+            'Absensi bulan ini',
+            style: TextStyle(fontSize: 15),
           ),
           actions: <Widget>[
             FlatButton(
@@ -233,7 +233,7 @@ class _AbsensiState extends State<Absensi> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.lightBlue,
         child: Icon(Icons.get_app),
         onPressed: () {
           _alertDialog();
