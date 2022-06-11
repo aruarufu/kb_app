@@ -1,5 +1,6 @@
 class BaseUrl {
-  static String url = "http://192.168.1.5/apiaspen";
+  //static String url = "http://192.168.68.78/apiaspen/";
+  static String url = "http://192.168.1.5/apiaspen/";
   static String login = "$url/login.php";
   static String absen = "$url/data_absensi.php";
   static String lokasikantor = "$url/ambil_lokasi_kantor.php";

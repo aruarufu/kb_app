@@ -14,7 +14,7 @@ class _WebViewStackState extends State<WebViewStack> {
     return Stack(
       children: [
         WebView(
-          initialUrl: 'http://192.168.1.5/spkanggota/',
+          initialUrl: 'https://kapalbajaspk.000webhostapp.com/spkanggota/',
           onPageStarted: (url) {
             setState(() {
               loadingPercentage = 0;
