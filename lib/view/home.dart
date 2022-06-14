@@ -1,11 +1,24 @@
 import 'package:kb_app/view/absensi.dart';
-import 'package:kb_app/view/lembur.dart';
+import 'package:kb_app/view/dokum.dart';
 import 'package:kb_app/view/spkanggota.dart';
 import 'package:kb_app/view/location.dart';
 import 'package:kb_app/view/permit.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:image_picker/image_picker.dart';
+
+const List<String> iconNames = <String>[
+  'images/svgicon/home.svg'
+      'images/svgicon/location.svg'
+      'images/svgicon/dokum.svg'
+      'images/svgicon/agenda.svg'
+      'images/svgicon/permit/svg'
+      'images/svgicon/spk.svg'
+      'images/svgicon/presensi.svg'
+      'images/svgicon/profile.svg'
+];
 
 class Home extends StatefulWidget {
   @override
@@ -75,6 +88,7 @@ class _HomeState extends State<Home> {
         children: [
           autoPlayImage,
           Divider(
+            height: 1,
             color: Colors.white,
           ),
           Akun(
@@ -86,6 +100,7 @@ class _HomeState extends State<Home> {
             url: urlfoto,
           ),
           Divider(
+            height: 1,
             color: Colors.white,
           ),
           MenuUtama(),
@@ -154,25 +169,31 @@ class MenuUtama extends StatelessWidget {
     return Card(
       // color: Colors.amber[700],
       child: Container(
-        padding: EdgeInsets.all(10.0),
+        padding: EdgeInsets.all(25.0),
         child: GridView.count(
+          physics: const NeverScrollableScrollPhysics(),
           shrinkWrap: true,
-          crossAxisCount: 3,
+          crossAxisCount: 2,
           children: <Widget>[
             Column(
               children: [
                 Material(
-                  borderRadius: BorderRadius.circular(100.0),
-                  color: Colors.lightBlue[700],
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)),
+                  color: Colors.blueGrey[50],
                   child: IconButton(
-                    icon: Icon(Icons.access_alarms_rounded),
+                    icon: SvgPicture.asset(
+                      "images/svgicon/presensi.svg",
+                      width: 110,
+                      height: 110,
+                    ),
                     onPressed: () {
                       Navigator.of(context).push(new MaterialPageRoute(
                           builder: (BuildContext context) => Absensi()));
                     },
-                    padding: EdgeInsets.all(10),
+                    padding: EdgeInsets.all(13),
                     color: Colors.white,
-                    iconSize: 25.0,
+                    iconSize: 100.0,
                   ),
                 ),
                 SizedBox(
@@ -188,17 +209,22 @@ class MenuUtama extends StatelessWidget {
             Column(
               children: [
                 Material(
-                  borderRadius: BorderRadius.circular(100.0),
-                  color: Colors.lightBlue[700],
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)),
+                  color: Colors.blueGrey[50],
                   child: IconButton(
-                    icon: Icon(Icons.edit),
+                    icon: SvgPicture.asset(
+                      "images/svgicon/permit.svg",
+                      width: 110,
+                      height: 110,
+                    ),
                     onPressed: () {
                       Navigator.of(context).push(new MaterialPageRoute(
                           builder: (BuildContext context) => Permit()));
                     },
-                    padding: EdgeInsets.all(10),
+                    padding: EdgeInsets.all(13),
                     color: Colors.white,
-                    iconSize: 25.0,
+                    iconSize: 100.0,
                   ),
                 ),
                 SizedBox(
@@ -214,24 +240,29 @@ class MenuUtama extends StatelessWidget {
             Column(
               children: [
                 Material(
-                  borderRadius: BorderRadius.circular(100.0),
-                  color: Colors.lightBlue[700],
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)),
+                  color: Colors.blueGrey[50],
                   child: IconButton(
-                    icon: Icon(Icons.map),
+                    icon: SvgPicture.asset(
+                      "images/svgicon/location.svg",
+                      width: 110,
+                      height: 110,
+                    ),
                     onPressed: () {
                       Navigator.of(context).push(new MaterialPageRoute(
                           builder: (BuildContext context) => LocationArea()));
                     },
-                    padding: EdgeInsets.all(10),
+                    padding: EdgeInsets.all(13),
                     color: Colors.white,
-                    iconSize: 25.0,
+                    iconSize: 100.0,
                   ),
                 ),
                 SizedBox(
                   height: 8.0,
                 ),
                 Text(
-                  'Set lokasi',
+                  'Set Lokasi',
                   style: TextStyle(
                       color: Colors.black, fontWeight: FontWeight.bold),
                 )
@@ -240,24 +271,29 @@ class MenuUtama extends StatelessWidget {
             Column(
               children: [
                 Material(
-                  borderRadius: BorderRadius.circular(100.0),
-                  color: Colors.lightBlue[700],
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)),
+                  color: Colors.blueGrey[50],
                   child: IconButton(
-                    icon: Icon(Icons.photo_album_rounded),
+                    icon: SvgPicture.asset(
+                      "images/svgicon/dokum.svg",
+                      width: 110,
+                      height: 110,
+                    ),
                     onPressed: () {
                       Navigator.of(context).push(new MaterialPageRoute(
                           builder: (BuildContext context) => Dokum()));
                     },
-                    padding: EdgeInsets.all(10),
+                    padding: EdgeInsets.all(13),
                     color: Colors.white,
-                    iconSize: 25.0,
+                    iconSize: 100.0,
                   ),
                 ),
                 SizedBox(
                   height: 8.0,
                 ),
                 Text(
-                  'Dokum',
+                  'Dokumentasi',
                   style: TextStyle(
                       color: Colors.black, fontWeight: FontWeight.bold),
                 )
@@ -266,24 +302,29 @@ class MenuUtama extends StatelessWidget {
             Column(
               children: [
                 Material(
-                  borderRadius: BorderRadius.circular(100.0),
-                  color: Colors.lightBlue[700],
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)),
+                  color: Colors.blueGrey[50],
                   child: IconButton(
-                    icon: Icon(Icons.watch),
+                    icon: SvgPicture.asset(
+                      "images/svgicon/spk.svg",
+                      width: 110,
+                      height: 110,
+                    ),
                     onPressed: () {
                       Navigator.of(context).push(new MaterialPageRoute(
                           builder: (BuildContext context) => WebViewSAW()));
                     },
-                    padding: EdgeInsets.all(10),
+                    padding: EdgeInsets.all(13),
                     color: Colors.white,
-                    iconSize: 25.0,
+                    iconSize: 100.0,
                   ),
                 ),
                 SizedBox(
                   height: 8.0,
                 ),
                 Text(
-                  'SPK',
+                  'SPK KB',
                   style: TextStyle(
                       color: Colors.black, fontWeight: FontWeight.bold),
                 )

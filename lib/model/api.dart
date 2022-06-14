@@ -1,6 +1,6 @@
 class BaseUrl {
-  //static String url = "http://192.168.68.78/apiaspen/";
-  static String url = "http://192.168.1.5/apiaspen/";
+  static String url = "https://9001f68fbf3091.lhrtunnel.link/apiaspen/";
+  //static String url = "http://192.168.43.85/apiaspen/";
   static String login = "$url/login.php";
   static String absen = "$url/data_absensi.php";
   static String lokasikantor = "$url/ambil_lokasi_kantor.php";
@@ -14,6 +14,6 @@ class BaseUrl {
   static String getmasterpermit = "$url/get_masterpermit.php";
   static String uploadpermit = "$url/proses_permit.php";
   static String urlfilepermit = "$url/permit/";
-  static String loadlembur = "$url/loadlembur.php?";
-  static String inputlembur = "$url/inputlembur.php";
+  static String loaddokum = "$url/loaddokum.php?";
+  static String inputdokum = "$url/inputdokum.php";
 }

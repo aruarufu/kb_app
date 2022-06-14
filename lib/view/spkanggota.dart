@@ -12,7 +12,7 @@ class _WebViewSAWState extends State<WebViewSAW> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Flutter WebView'),
+        title: const Text('Simple Additive Weighting'),
       ),
       body: WebViewStack(), // Replace the WebView widget with WebViewStack
     );

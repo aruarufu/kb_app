@@ -40,6 +40,7 @@ dependencies:
   datetime_picker_formfield: ^0.1.8
   flutter_web_browser: ^0.16.0
   webview_flutter: ^2.0.13
+  flutter_svg: ^0.22.0
 
 dev_dependencies:
   flutter_test:
@@ -65,6 +66,7 @@ flutter:
     - gambar/profile.png
     - gambar/jam.png
     - images/slider/
+    - images/svgicon/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

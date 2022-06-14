@@ -171,13 +171,31 @@ class ItemList extends StatelessWidget {
                     children: [
                       Container(
                         child: Text(
-                          'HP',
+                          'No. HP',
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
                       ),
                       Container(
                         width: 200.0,
                         child: Text(list[i]['hp'] ?? ''),
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        child: Text(
+                          'Email',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      Container(
+                        width: 200.0,
+                        child: Text(list[i]['email'] ?? ''),
                       )
                     ],
                   ),

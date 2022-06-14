@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-class WebViewStack extends StatefulWidget {
+class WebViewDokum extends StatefulWidget {
   @override
-  State<WebViewStack> createState() => _WebViewStackState();
+  State<WebViewDokum> createState() => _WebViewDokum();
 }
 
-class _WebViewStackState extends State<WebViewStack> {
+class _WebViewDokum extends State<WebViewDokum> {
   var loadingPercentage = 0;
 
   @override
@@ -14,7 +14,9 @@ class _WebViewStackState extends State<WebViewStack> {
     return Stack(
       children: [
         WebView(
-          initialUrl: 'https://kapalbajaspk.000webhostapp.com/spkanggota/',
+          //initialUrl: 'https://kapalbajaspk.000webhostapp.com/spkanggota/',
+          initialUrl:
+              'https://drive.google.com/drive/folders/17ZhpPvkxMSDma8db138m3BVe_niTAFIe?usp=sharing',
           javascriptMode: JavascriptMode.unrestricted,
           onPageStarted: (url) {
             setState(() {

@@ -10,6 +10,13 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:onesignal_flutter/onesignal_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
+const List<String> iconNames = <String>[
+  'images/svgicon/main.svg'
+      'images/svgicon/profil.svg'
+      'images/svgicon/about.svg'
+];
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -449,24 +456,27 @@ class _MainMenuState extends State<MainMenu> {
           indicatorColor: Colors.lightBlueAccent,
           tabs: <Widget>[
             Tab(
-              icon: Icon(Icons.home_rounded),
+              icon: SvgPicture.asset("images/svgicon/main.svg",
+                  width: 24, height: 24),
               child: new Text(
                 "Home",
-                style: TextStyle(fontSize: 12.0),
+                style: TextStyle(fontSize: 12.0, fontWeight: FontWeight.bold),
               ),
             ),
             Tab(
-              icon: Icon(Icons.person_rounded),
+              icon: SvgPicture.asset("images/svgicon/profil.svg",
+                  width: 24, height: 24),
               child: new Text(
                 "Profile",
-                style: TextStyle(fontSize: 12.0),
+                style: TextStyle(fontSize: 12.0, fontWeight: FontWeight.bold),
               ),
             ),
             Tab(
-              icon: Icon(Icons.info_outline_rounded),
+              icon: SvgPicture.asset("images/svgicon/about.svg",
+                  width: 24, height: 24),
               child: new Text(
                 "About",
-                style: TextStyle(fontSize: 12.0),
+                style: TextStyle(fontSize: 12.0, fontWeight: FontWeight.bold),
               ),
             )
           ],
